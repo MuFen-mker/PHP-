@@ -1,12 +1,10 @@
-<html>
+<html lang="en">
 <head>
     <title>会员管理系统</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image" href="image/favicon.ico">
     <style>
         body{
-            background-image:url(image/blue.jpg)
 
         }
     </style>

@@ -1,8 +1,7 @@
-<html>
+<html lang="en">
 <head>
     <title>用户注册</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image" href="image/favicon.ico">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <script type="text/javascript">
         function chkinput(form)
@@ -91,23 +90,23 @@
             <caption>请填写用户信息</caption>
             <tr>
                 <td class="tb_alignr">用户名：</td>
-                <td class="tb_alignl"><input type="text" name="user_name" id="user_name">*</td>
+                <td class="tb_alignl"><label><input type="text" name="user_name" id="user_name"></label>*</td>
             </tr>
             <tr>
                 <td class="tb_alignr">密&nbsp;&nbsp;码：</td>
-                <td class="tb_alignl"><input type="password" name="password" id="password">*</td>
+                <td class="tb_alignl"><label><input type="password" name="password" id="password"></label>*</td>
             </tr>
             <tr>
                 <td class="tb_alignr">确认密码：</td>
-                <td class="tb_alignl"><input type="password" name="password1" id="password1">*</td>
+                <td class="tb_alignl"><label><input type="password" name="password1" id="password1"></label>*</td>
             </tr>
             <tr>
                 <td class="tb_alignr">真实姓名：</td>
-                <td class="tb_alignl"><input type="text" name="true_name" id="true_name"></td>
+                <td class="tb_alignl"><label><input type="text" name="true_name" id="true_name"></label></td>
             </tr>
             <tr>
                 <td class="tb_alignr">性别：</td>
-                <td class="tb_alignl"><input type="radio" name="sex" id="sex_m" value="男">
+                <td class="tb_alignl"><label><input type="radio" name="sex" id="sex_m" value="男">
                     <label for="sex_m">男</label>&nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="radio" name="sex" id="sex_w" value="女" checked="checked">
                     <label for="sex_w">女</label>
@@ -115,23 +114,24 @@
             </tr>
             <tr>
                 <td class="tb_alignr">E-mail：</td>
-                <td class="tb_alignl"><input type="text" name="email" id="email"></td>
+                <td class="tb_alignl"><label><input type="text" name="email" id="email"></label></td>
             </tr>
             <tr>
                 <td class="tb_alignr">电话：</td>
-                <td class="tb_alignl"><input type="text" name="tel" id="tel"></td>
+                <td class="tb_alignl"><label><input type="text" name="tel" id="tel"></label></td>
             </tr>
             <tr>
                 <td class="tb_alignr">QQ：</td>
-                <td class="tb_alignl"><input type="text" name="qq" id="qq"></td>
+                <td class="tb_alignl"><label><input type="text" name="qq" id="qq"></label></td>
             </tr>
             <tr>
                 <td class="tb_alignr">地址：</td>
-                <td class="tb_alignl"><input type="text" name="address" id="address"></td>
+                <td class="tb_alignl"><label><input type="text" name="address" id="address"></label></td>
             </tr>
             <tr>
                 <td class="tb_alignr">密码提示问题：</td>
                 <td class="tb_alignl">
+                    <label>
                     <select name="question" id="question">
                         <option value="0">你的小学名字叫什么？</option>
                         <option value="1">你的中学名字叫什么？</option>
@@ -140,11 +140,12 @@
                         <option value="4">你的父亲名字叫什么？</option>
                         <option value="5">你的配偶名字叫什么？</option>
                     </select>
+                    </label>
                 </td>
             </tr>
             <tr>
                 <td class="tb_alignr">密码提示答案：</td>
-                <td class="tb_alignl"><input type="text" name="answer" id="answer"></td>
+                <td class="tb_alignl"><label><input type="text" name="answer" id="answer"></label></td>
             </tr>
             <tr>
                 <td class="tb_alignr"><input type="hidden" name="authority" id="authority" value="0"></td>

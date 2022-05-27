@@ -1,55 +1,47 @@
--- phpMyAdmin SQL Dump
--- version phpStudy 2014
--- http://www.phpmyadmin.net
---
--- 主机: localhost
--- 生成日期: 2020 年 02 月 12 日 14:28
--- 服务器版本: 5.5.53
--- PHP 版本: 5.4.45
+/*
+ Navicat MySQL Data Transfer
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+ Source Server         : MuFenServer
+ Source Server Type    : MySQL
+ Source Server Version : 50726
+ Source Host           : localhost:3306
+ Source Schema         : usermm
 
+ Target Server Type    : MySQL
+ Target Server Version : 50726
+ File Encoding         : 65001
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+ Date: 27/05/2022 21:21:12
+*/
 
---
--- 数据库: `usermm`
---
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
 
--- --------------------------------------------------------
-
---
--- 表的结构 `member`
---
-
-CREATE TABLE IF NOT EXISTS `member` (
+-- ----------------------------
+-- Table structure for member
+-- ----------------------------
+DROP TABLE IF EXISTS `member`;
+CREATE TABLE `member`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(20) COLLATE utf8_estonian_ci DEFAULT NULL,
-  `password` varchar(20) COLLATE utf8_estonian_ci DEFAULT NULL,
-  `question` varchar(50) COLLATE utf8_estonian_ci DEFAULT NULL,
-  `answer` varchar(50) COLLATE utf8_estonian_ci DEFAULT NULL,
-  `truename` varchar(50) COLLATE utf8_estonian_ci NOT NULL,
-  `sex` varchar(10) COLLATE utf8_estonian_ci DEFAULT NULL,
-  `address` varchar(50) COLLATE utf8_estonian_ci NOT NULL,
-  `tel` varchar(50) COLLATE utf8_estonian_ci NOT NULL,
-  `QQ` varchar(20) COLLATE utf8_estonian_ci NOT NULL,
-  `email` varchar(50) COLLATE utf8_estonian_ci NOT NULL,
-  `authority` char(1) COLLATE utf8_estonian_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_estonian_ci AUTO_INCREMENT=3 ;
+  `username` varchar(20) CHARACTER SET utf8 COLLATE utf8_estonian_ci NULL DEFAULT NULL,
+  `password` varchar(20) CHARACTER SET utf8 COLLATE utf8_estonian_ci NULL DEFAULT NULL,
+  `question` varchar(50) CHARACTER SET utf8 COLLATE utf8_estonian_ci NULL DEFAULT NULL,
+  `answer` varchar(50) CHARACTER SET utf8 COLLATE utf8_estonian_ci NULL DEFAULT NULL,
+  `truename` varchar(50) CHARACTER SET utf8 COLLATE utf8_estonian_ci NOT NULL,
+  `sex` varchar(10) CHARACTER SET utf8 COLLATE utf8_estonian_ci NULL DEFAULT NULL,
+  `address` varchar(50) CHARACTER SET utf8 COLLATE utf8_estonian_ci NOT NULL,
+  `tel` varchar(50) CHARACTER SET utf8 COLLATE utf8_estonian_ci NOT NULL,
+  `QQ` varchar(20) CHARACTER SET utf8 COLLATE utf8_estonian_ci NOT NULL,
+  `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_estonian_ci NOT NULL,
+  `authority` char(1) CHARACTER SET utf8 COLLATE utf8_estonian_ci NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_estonian_ci ROW_FORMAT = Dynamic;
 
---
--- 转存表中的数据 `member`
---
+-- ----------------------------
+-- Records of member
+-- ----------------------------
+INSERT INTO `member` VALUES (2, '大麻袋', '888', '3', '广雅中学', '李嘉诚', '男', '太平山顶', '999666', '12345008', '123008@163.com', '0');
+INSERT INTO `member` VALUES (3, 'Du', '123', '0', '1', '123', '男', '2222', '22222222', '111', '1001@qq.com', '0');
+INSERT INTO `member` VALUES (4, 'MuFen', 'MuFen123456', '0', '1', 'alone', '男', '2222', '22222222', '22222222', '1001@qq.com', '0');
 
-INSERT INTO `member` (`id`, `username`, `password`, `question`, `answer`, `truename`, `sex`, `address`, `tel`, `QQ`, `email`, `authority`) VALUES
-(1, 'admin', '123', '2', '清华大学', '蒙面超人', '男', '五道口1001号', '13570516666', '473704087', '473704087@qq.com', '0'),
-(2, '大麻袋', '888', '3', '广雅中学', '李嘉诚', '男', '太平山顶', '999666', '12345008', '123008@163.com', '0');
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+SET FOREIGN_KEY_CHECKS = 1;

@@ -11,5 +11,4 @@ if(mysqli_connect_errno($conn))
 {
     echo "连接MySql数据库失败".mysqli_connect_error()."<br>";
 }
-
 ?>

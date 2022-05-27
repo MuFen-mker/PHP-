@@ -1,8 +1,7 @@
-<html>
+<html lang="en">
 <head>
     <title>注销用户</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image" href="image/favicon.ico">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>

@@ -1,8 +1,7 @@
-<html>
+<html lang="en">
 <head>
     <title>修改用户资料</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image" href="image/favicon.ico">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <script type="text/javascript">
         function chkinput(form)
@@ -98,20 +97,20 @@ $info = mysqli_fetch_array($sql);
             <caption>修改用户信息</caption>
             <tr>
                 <td class="tb_alignr">用户名：</td>
-                <td class="tb_alignl"><input type="text" name="user_name" id="user_name"  readonly="readonly"
-                                             value="<?php echo $info['username'];?>">*</td>
+                <td class="tb_alignl"><label><input type="text" name="user_name" id="user_name"  readonly="readonly"
+                                             value="<?php echo $info['username'];?>"></label>*</td>
             </tr>
             <tr>
                 <td class="tb_alignr">密&nbsp;&nbsp;码：</td>
-                <td class="tb_alignl"><input type="text" name="password" id="password" value="<?php echo $info['password']?>">*</td>
+                <td class="tb_alignl"><label><input type="text" name="password" id="password" value="<?php echo $info['password']?>"></label>*</td>
             </tr>
             <tr>
                 <td class="tb_alignr">确认密码：</td>
-                <td class="tb_alignl"><input type="text" name="password1" id="password1" value="<?php echo $info['password']?>" >*</td>
+                <td class="tb_alignl"><label><input type="text" name="password1" id="password1" value="<?php echo $info['password']?>" ></label>*</td>
             </tr>
             <tr>
                 <td class="tb_alignr">真实姓名：</td>
-                <td class="tb_alignl"><input type="text" name="true_name" id="true_name" value="<?php echo $info['truename']?>"></td>
+                <td class="tb_alignl"><label><input type="text" name="true_name" id="true_name" value="<?php echo $info['truename']?>"></label></td>
             </tr>
             <tr>
                 <td class="tb_alignr">性别：</td>
@@ -123,23 +122,24 @@ $info = mysqli_fetch_array($sql);
             </tr>
             <tr>
                 <td class="tb_alignr">E-mail：</td>
-                <td class="tb_alignl"><input type="text" name="email" id="email" value="<?php echo $info['email']?>"></td>
+                <td class="tb_alignl"><label><input type="text" name="email" id="email" value="<?php echo $info['email']?>"></label></td>
             </tr>
             <tr>
                 <td class="tb_alignr">电话：</td>
-                <td class="tb_alignl"><input type="text" name="tel" id="tel" value="<?php echo $info['tel']?>"></td>
+                <td class="tb_alignl"><label><input type="text" name="tel" id="tel" value="<?php echo $info['tel']?>"></label></td>
             </tr>
             <tr>
                 <td class="tb_alignr">QQ：</td>
-                <td class="tb_alignl"><input type="text" name="qq" id="qq" value="<?php echo $info['qq']?>"></td>
+                <td class="tb_alignl"><label><input type="text" name="qq" id="qq" value="<?php echo $info['qq']?>"></label></td>
             </tr>
             <tr>
                 <td class="tb_alignr">地址：</td>
-                <td class="tb_alignl"><input type="text" name="address" id="address" value="<?php echo $info['address']?>"></td>
+                <td class="tb_alignl"><label><input type="text" name="address" id="address" value="<?php echo $info['address']?>"></label></td>
             </tr>
             <tr>
                 <td class="tb_alignr">密码提示问题：</td>
                 <td class="tb_alignl">
+                    <label>
                     <select name="question" id="question">
                         <option value="0">你的小学名字叫什么？</option>
                         <option value="1">你的中学名字叫什么？</option>
@@ -152,11 +152,12 @@ $info = mysqli_fetch_array($sql);
                         echo "<script>document.getElementById('question').selectedIndex = $question;</script>"
                         ?>
                     </select>
+                    </label>
                 </td>
             </tr>
             <tr>
                 <td class="tb_alignr">密码提示答案：</td>
-                <td class="tb_alignl"><input type="text" name="answer" id="answer" value="<?php echo $info['answer']?>"></td>
+                <td class="tb_alignl"><label><input type="text" name="answer" id="answer" value="<?php echo $info['answer']?>"></label></td>
             </tr>
             <tr>
                 <td class="tb_alignr"><input type="hidden" name="authority" id="authority" value="<?php echo $info['authority']?>">

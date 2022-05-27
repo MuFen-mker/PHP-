@@ -1,8 +1,7 @@
-<html>
+<html lang="en">
 <head>
     <title>找回密码</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image" href="image/favicon.ico">
+    <link rel="stylesheet" href="style.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
@@ -11,7 +10,7 @@
     <p><strong>查询问题</strong></p>
     <form name="form1" method="post" action="showpassword.php">
         <p>问题提示：
-            <select name="question" id="question" disabled="disabled" style="height:30px;width:200px;line-height: 28px;">
+            <label><select name="question" id="question" disabled="disabled" style="height:30px;width:200px;line-height: 28px;">
                 <option value="0">你的小学名字叫什么？</option>
                 <option value="1">你的中学名字叫什么？</option>
                 <option value="2">你的大学名字叫什么？</option>
@@ -35,8 +34,9 @@
                 }
                 ?>
             </select>
+            </label>
         </p>
-        <p>问题答案：<input type="text" name="answer" id="answer" style="height: 30px;width: 200px;">
+        <p>问题答案：<label><input type="text" name="answer" id="answer" style="height: 30px;width: 200px;"></label>
             <input type="hidden" name="user_name" id="user_name" value="<?php echo $user_name;?>"></p>
         <p><input type="submit" name="button1" id="button1" value="提 交">
             <input type="reset" name="button2" id="button2" value="重 置"></p>
